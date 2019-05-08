@@ -65,12 +65,7 @@ export default class App extends React.Component {
 					onPress={() => this.submitToGoogle()}
 					title="Re-Analyze"
 				/>			
-                         <Button
-					style={{ marginBottom: 10 }}
-                    color="#136206"
-					onPress={() => this.submitToGoogle()}
-					title="Edit Photo"
-				/>			
+    			
                         </View>
 						{this.state.googleResponse && (
                    <Text
