@@ -39,53 +39,53 @@ export default class App extends React.Component {
 			//This is the title of the page "Choose Your Plant!" 
 					<View style={styles.getStartedContainer}>
 						{source ? null : (
-							<Text style={styles.getStartedText}>Choose Your Plant!</Text>
+					<Text style={styles.getStartedText}>Choose Your Plant!</Text>
 						)}
 					</View>
 
 					<View style={styles.helpContainer}>
-                        <View style={styles.helpContainer}>
+                        	<View style={styles.helpContainer}>
 				//Here is the button to call the function "take photo" to choose image
 						<Button
 							onPress={this._takePhoto}
-                            color="#136206"
+                            				color="#136206"
 							title="Pick an image/ Take Picture"
 						/>
                                 </View>
-		// Here we potray the image from the upload
-                        <Image style={styles.avatar} source={this.state.avatarSource} />
+				// Here we potray the image from the upload
+                        	<Image style={styles.avatar} source={this.state.avatarSource} />
 
-                    <View style={styles.helpContainer}>
-			// We style the button to green and have it 
-                    <Button
-					style={{ marginBottom: 10 }}
-                    color="#136206"
-					onPress={() => this.submitToGoogle()}
-					title="Analyze"
-				/>
-			//Have a button to analyze and realize
-                         <Button
-					style={{ marginBottom: 10 }}
-                    color="#136206"
-					onPress={() => this.submitToGoogle()}
-					title="Re-Analyze"
-				/>			
+                    		<View style={styles.helpContainer}>
+				// We style the button to green and have it 
+                    			<Button
+						style={{ marginBottom: 10 }}
+						color="#136206"
+						onPress={() => this.submitToGoogle()}
+						title="Analyze"
+					/>
+				//Have a button to analyze and realize
+					<Button
+						style={{ marginBottom: 10 }}
+						color="#136206"
+						onPress={() => this.submitToGoogle()}
+						title="Re-Analyze"
+					/>			
     			
-                        </View>
-			//Google Vision API
+                        	</View>
+						//Google Vision API
 						{this.state.googleResponse && (
-                   <Text
+                   				<Text
 						onPress={this._copyToClipboard}
 						onLongPress={this._share}
 						style={{ paddingVertical: 10, paddingHorizontal: 10 }}
-				        >Sunflower!</Text>
-						)}
+				        	>Sunflower!</Text>
+					)}
  
 
 						{this._maybeRenderImage()}
 						{this._maybeRenderUploadingOverlay()}
 
-            </View>
+           				 </View>
 				</ScrollView>
 			</View>
 		);
